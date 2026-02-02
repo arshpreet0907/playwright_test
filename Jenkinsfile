@@ -25,7 +25,7 @@ pipeline {
         stage('Run Playwright Tests') {
             steps {
                 script {
-                    sh 'npx playwright test singletontests/ --headed --workers=1 --project=chromium --reporter=html'
+                    sh 'npx playwright test BoxPom/Runner.spec.ts --headed --workers=1 --project=chromium --reporter=html'
                 }
             }
         }
