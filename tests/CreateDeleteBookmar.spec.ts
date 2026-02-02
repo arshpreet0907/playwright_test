@@ -60,7 +60,7 @@ async function initialise() {
     });
     
     context = await browser.newContext({
-        viewport: null
+       
     });
     page = await context.newPage();
     page.setDefaultTimeout(40000);
