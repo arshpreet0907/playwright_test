@@ -17,6 +17,8 @@ export class BoxAppPage {
     
     private readonly trashButton = "button[aria-label='Trash']";
     private readonly confirmDeleteButton = "//span[text()='Okay']";
+
+    private readonly newNoteButton = "//a[@role='menuitem' and @data-resin-target='boxnotes']";
     
     private readonly expectedPageTitle = 'Files | Powered by Box';
     private readonly loginPageTitle = 'Box | Login';
@@ -162,4 +164,16 @@ export class BoxAppPage {
     public async deleteFolderWithVerification(folderName: string): Promise<boolean> {
         return await this.deleteFolder(folderName);
     }
+    
+    async clickNewNote(): Promise<Page> {
+        const [newPage] = await Promise.all([
+            this.page.context().waitForEvent('page'),
+            this.page.locator(this.newNoteButton).click()
+        ]);
+        
+        await newPage.waitForLoadState('load');
+        
+        return newPage;
+    }
+
 }

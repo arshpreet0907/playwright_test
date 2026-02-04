@@ -1,0 +1,14 @@
+{
+    "saucedemo": {
+        "url": "https://www.saucedemo.com",
+        "user": "standard_user",
+        "password": "secret_sauce",
+        "users": [
+            "standard_user",
+            "problem_user",
+            "performance_glitch_user",
+            "error_user",
+            "visual_user"
+        ]
+    }
+}

@@ -22,7 +22,7 @@ test('Basic Shadow DOM ', async ({ page }) => {
     };
   });
   
-//   console.log('Shadow DOM Info:', shadowInfo);
+  console.log('Shadow DOM Info:', shadowInfo);
 //   const headerInShadow = page.locator('shop-app shop-header');
 //   await expect(headerInShadow).toBeVisible();
 

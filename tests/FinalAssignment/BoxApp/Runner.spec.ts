@@ -1,5 +1,4 @@
 import { test, expect } from '@playwright/test';
-import { BrowserManager } from './Utils/BrowserManager';
 import { getEmail, getPassword } from './Utils/Credentials';
 import { LoginPage } from './Pages/LoginPage';
 import { PasswordPage } from './Pages/PasswordPage';
