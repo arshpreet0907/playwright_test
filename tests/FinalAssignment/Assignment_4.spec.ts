@@ -2,16 +2,21 @@
 // => You need to login  and logout into saucedemo website using different users and parameterise the test with different set of test data
 import { test, expect } from '@playwright/test';
 import * as testData from './SauceLabs/TestData/data.json';
+import { CsvReader, UserCredentials } from './SauceLabs/Utils/Data';
+
+
+const userCredentials: UserCredentials[] = CsvReader.readUserCredentialsParse('tests/FinalAssignment/SauceLabs/TestData/credentials.csv');
 
 test.describe('Assignment 4 - SauceLabs Multi-User Login Test Suite', () => {
 
     test('Verify login and logout for all users',{tag:["@saucelabs","@final_assignment_4"]}, async ({ page }) => {
         
-        const users = testData.saucedemo.users;
-        const password = testData.saucedemo.password;
+        // const users = testData.saucedemo.users;
+        // const password = testData.saucedemo.password;
         const url = testData.saucedemo.url;
 
-        for (const username of users) {
+        // for (const username of users) {
+        for (const { username, password } of userCredentials) {
             
             await test.step(`Navigate to SauceDemo for user: ${username}`, async () => {
                 await page.goto(url);
