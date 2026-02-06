@@ -18,15 +18,9 @@ export class OverviewPage {
         this.page = page;
     }
 
-    /**
-     * Finish purchase and verify items
-     * @param itemCount - Expected number of items in cart
-     */
     async finishPurchase(itemCount: number): Promise<void> {
-        // Wait for items to load
         await this.page.waitForLoadState('networkidle');
         
-        // Get item details
         const itemNames = this.page.locator(this.itemNames);
         const itemDescriptions = this.page.locator(this.itemDescriptions);
         const itemPrices = this.page.locator(this.itemPrices);

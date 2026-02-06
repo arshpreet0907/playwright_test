@@ -3,7 +3,6 @@ import { Page, expect } from '@playwright/test';
 export class ThankyouPage {
     private page: Page;
 
-    // Locators
     private readonly completeHeader = "//h2[@data-test='complete-header' and @class='complete-header']";
     private readonly completeText = "//div[@data-test='complete-text' and @class='complete-text']";
     private readonly backToProductsButton = "//button[@id='back-to-products' and @name='back-to-products']";

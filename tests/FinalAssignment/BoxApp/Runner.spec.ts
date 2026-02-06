@@ -6,7 +6,7 @@ import { BoxAppPage } from './Pages/BoxAppPage';
 
 
 
-test.describe('Box App - Complete E2E Flow', () => {
+test.describe('Box App', () => {
     
     test('Box App: Login, Create Folder, Delete Folder, and Logout', async () => {
         

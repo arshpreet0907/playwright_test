@@ -13,10 +13,10 @@ test.describe('Assignment 4 - SauceLabs Multi-User Login Test Suite', () => {
         
         // const users = testData.saucedemo.users;
         // const password = testData.saucedemo.password;
-        const url = testData.saucedemo.url;
+        // for (const username of users) { // these 3 lines use json file 
 
-        // for (const username of users) {
-        for (const { username, password } of userCredentials) {
+        const url = testData.saucedemo.url;
+        for (const { username, password } of userCredentials) { // these 2 lines use csv file
             
             await test.step(`Navigate to SauceDemo for user: ${username}`, async () => {
                 await page.goto(url);
