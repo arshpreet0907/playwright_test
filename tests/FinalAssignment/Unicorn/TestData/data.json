@@ -1,0 +1,8 @@
+{
+        "unicorn": {
+        "url": "https://trainee-web-app.azurewebsites.net/auth/login",
+        "user": "test@test.com",
+        "password": "test",
+        "loggedinUrl": "https://trainee-web-app.azurewebsites.net/dashboard"
+    }
+}
